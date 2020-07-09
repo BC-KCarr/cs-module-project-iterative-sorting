@@ -21,9 +21,18 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
-
-
+    # boolean value to keep track of swaping
+    sorted = False
+    # while the list is not sorted 
+    while not sorted:
+        sorted = True
+        for i in range(0, len(arr) -1):
+            # check if the current value is greater than the next value in list
+            if arr[i] > arr[i+1]:
+                sorted = False
+                # if so swap values 
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+        
     return arr
 
 '''
